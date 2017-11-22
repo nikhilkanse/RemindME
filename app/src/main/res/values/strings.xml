@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RemindMe</string>
+    <string name="google_login_button_msg_string">Sign In With Google</string>
+    <string name="ttf_file_path">fonts/cac_champagne.ttf</string>
 </resources>

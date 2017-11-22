@@ -1,19 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_screen_background_gray">
+    android:background="@android:color/white"
+    android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@mipmap/app_logo"/>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to RemindME \n Organise and prioritize all your task."/>
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/border"
+        android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/colored_app_logo" />
 
+        <TextView
+            android:id="@+id/message_Textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_logo"
+            android:gravity="top|center"
+            android:padding="20dp"
+            android:text="“Men more frequently require to be reminded than informed.”"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
 
-</LinearLayout>
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/message_Textview"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:padding="20dp" />
+
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/sign_in_button"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="Continue"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

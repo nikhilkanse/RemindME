@@ -3,7 +3,9 @@ package com.in.nyk.remindme.activity;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Window;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
@@ -11,16 +13,17 @@ import android.widget.ImageView;
 import com.in.nyk.remindme.R;
 import com.in.nyk.remindme.view.AnimatedTransitionView.KenBurnsView;
 
-
 /**
  * Created by nikhilkanse on 22/11/17.
  */
 
 public class SplashScreensActivity extends Activity {
 
+    //Mark :- Class Private fields.
     private KenBurnsView mKenBurns;
     private ImageView mLogo;
 
+    //Mark :- Override methods.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,7 @@ public class SplashScreensActivity extends Activity {
         setAnimation();
     }
 
+    //Mark :- Private methods.
     private void setAnimation() {
         animation();
     }
@@ -52,6 +56,21 @@ public class SplashScreensActivity extends Activity {
         animatorSet.play(scaleXAnimation).with(scaleYAnimation).with(alphaAnimation);
         animatorSet.setStartDelay(500);
         animatorSet.start();
+
+        launchLoginScreen();
+    }
+
+    private void launchLoginScreen() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashScreensActivity.this,LoginActivity.class);
+                SplashScreensActivity.this.startActivity(intent);
+            }
+
+        }, 4000);
     }
 
 }
