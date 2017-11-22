@@ -62,6 +62,7 @@ public class SplashScreensActivity extends Activity {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashScreensActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 SplashScreensActivity.this.startActivity(intent);
             }
 
@@ -91,6 +92,7 @@ public class SplashScreensActivity extends Activity {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashScreensActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 SplashScreensActivity.this.startActivity(intent);
             }
 

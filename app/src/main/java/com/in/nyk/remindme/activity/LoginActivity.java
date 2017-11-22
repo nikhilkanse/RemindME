@@ -165,6 +165,7 @@ public class LoginActivity extends Activity {
 
     private void launchMainScreen() {
         Intent intent = new Intent(this,MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         this.startActivity(intent);
     }
 
