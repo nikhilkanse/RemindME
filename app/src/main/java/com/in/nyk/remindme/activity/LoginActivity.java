@@ -35,12 +35,12 @@ import com.in.nyk.remindme.R;
 public class LoginActivity extends Activity {
 
     private static final String TAG = "LoginActivity";
-    //Mark :- Class variables.
-    private TextView messageTextView;
-    private SignInButton googleSignInButton;
-    private Button continueButton;
-    private GoogleSignInClient mGoogleSignInClient;
     private static final int RC_SIGN_IN = 9001;
+    //Mark :- Class variables.
+    private TextView mMessageTextView;
+    private SignInButton mGoogleSignInButton;
+    private Button mContinueButton;
+    private GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
     private ProgressDialog mProgressDialog;
 
@@ -49,21 +49,21 @@ public class LoginActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
-        messageTextView = (TextView) findViewById(R.id.message_Textview);
-        googleSignInButton = (SignInButton) findViewById(R.id.sign_in_button);
-        continueButton = (Button) findViewById(R.id.continue_button);
+        mMessageTextView = (TextView) findViewById(R.id.message_Textview);
+        mGoogleSignInButton = (SignInButton) findViewById(R.id.sign_in_button);
+        mContinueButton = (Button) findViewById(R.id.continue_button);
 
         setFont();
         setGooglePlusButtonText(getResources().getString(R.string.google_login_button_msg_string));
 
-        continueButton.setOnClickListener(new View.OnClickListener() {
+        mContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchMainScreen();
             }
         });
 
-        googleSignInButton.setOnClickListener(new View.OnClickListener() {
+        mGoogleSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signIn();
@@ -132,7 +132,7 @@ public class LoginActivity extends Activity {
     }
 
     private void hideProgressDialog() {
-        if(mProgressDialog != null && mProgressDialog.isShowing()){
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
             mProgressDialog.hide();
         }
     }
@@ -164,20 +164,20 @@ public class LoginActivity extends Activity {
     }
 
     private void launchMainScreen() {
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         this.startActivity(intent);
     }
 
     private void setFont() {
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  getResources().getString(R.string.ttf_file_path));
-        messageTextView.setTypeface(custom_font);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), getResources().getString(R.string.ttf_file_path));
+        mMessageTextView.setTypeface(custom_font);
     }
 
     protected void setGooglePlusButtonText(String buttonText) {
         // Find the TextView that is inside of the SignInButton and set its text
-        for (int i = 0; i < googleSignInButton.getChildCount(); i++) {
-            View v = googleSignInButton.getChildAt(i);
+        for (int i = 0; i < mGoogleSignInButton.getChildCount(); i++) {
+            View v = mGoogleSignInButton.getChildAt(i);
 
             if (v instanceof TextView) {
                 TextView tv = (TextView) v;
