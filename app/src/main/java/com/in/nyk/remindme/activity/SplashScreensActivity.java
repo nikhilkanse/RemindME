@@ -10,6 +10,8 @@ import android.view.Window;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.in.nyk.remindme.R;
 import com.in.nyk.remindme.view.AnimatedTransitionView.KenBurnsView;
 
@@ -35,11 +37,35 @@ public class SplashScreensActivity extends Activity {
         mKenBurns.setImageResource(R.drawable.splash_screen_background);
 
         setAnimation();
+
+        checkIfUserAlredyLogin();
     }
 
     //Mark :- Private methods.
     private void setAnimation() {
         animation();
+    }
+
+    private void checkIfUserAlredyLogin() {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser == null) {
+            launchLoginScreen();
+        } else {
+            launchMainScreen();
+        }
+    }
+
+    private void launchMainScreen() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashScreensActivity.this, MainActivity.class);
+                SplashScreensActivity.this.startActivity(intent);
+            }
+
+        }, 4000);
     }
 
     private void animation() {
@@ -56,8 +82,6 @@ public class SplashScreensActivity extends Activity {
         animatorSet.play(scaleXAnimation).with(scaleYAnimation).with(alphaAnimation);
         animatorSet.setStartDelay(500);
         animatorSet.start();
-
-        launchLoginScreen();
     }
 
     private void launchLoginScreen() {
@@ -66,7 +90,7 @@ public class SplashScreensActivity extends Activity {
 
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreensActivity.this,LoginActivity.class);
+                Intent intent = new Intent(SplashScreensActivity.this, LoginActivity.class);
                 SplashScreensActivity.this.startActivity(intent);
             }
 
