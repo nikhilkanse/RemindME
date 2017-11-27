@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.in.nyk.remindme.view.RemindMEViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_fragment_view_flipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <include
+        layout="@layout/empty_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</com.in.nyk.remindme.view.RemindMEViewFlipper>

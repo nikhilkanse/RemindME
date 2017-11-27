@@ -2,4 +2,15 @@
     <string name="app_name">RemindMe</string>
     <string name="google_login_button_msg_string">Sign In With Google</string>
     <string name="ttf_file_path">fonts/cac_champagne.ttf</string>
+
+    <string name="one_year_ago">1 year ago</string>
+    <string name="years_ago">  years ago</string>
+    <string name="today">Today</string>
+    <string name="days_ago">  days ago</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="last_week">Last week</string>
+    <string name="weeks_ago">  weeks ago</string>
+    <string name="last_month">Last month</string>
+    <string name="months_ago">  months ago</string>
+
 </resources>
