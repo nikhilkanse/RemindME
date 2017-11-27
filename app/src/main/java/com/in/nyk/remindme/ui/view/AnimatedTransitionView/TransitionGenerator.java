@@ -1,4 +1,4 @@
-package com.in.nyk.remindme.view.AnimatedTransitionView;
+package com.in.nyk.remindme.ui.view.AnimatedTransitionView;
 
 /**
  * Created by nikhilkanse on 22/11/17.
@@ -17,6 +17,6 @@ public interface TransitionGenerator {
      *                 {@link KenBurnsView}.
      * @return a {@link Transition} object to be played by the {@link KenBurnsView}.
      */
-    public com.in.nyk.remindme.view.AnimatedTransitionView.Transition generateNextTransition(RectF drawableBounds, RectF viewport);
+    public com.in.nyk.remindme.ui.view.AnimatedTransitionView.Transition generateNextTransition(RectF drawableBounds, RectF viewport);
 
 }

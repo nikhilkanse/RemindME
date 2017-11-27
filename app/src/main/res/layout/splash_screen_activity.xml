@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.in.nyk.remindme.view.AnimatedTransitionView.KenBurnsView
+    <com.in.nyk.remindme.ui.view.AnimatedTransitionView.KenBurnsView
         android:id="@+id/ken_burns_images"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

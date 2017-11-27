@@ -1,4 +1,4 @@
-package com.in.nyk.remindme.fragment;
+package com.in.nyk.remindme.ui.fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;

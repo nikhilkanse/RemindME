@@ -1,4 +1,4 @@
-package com.in.nyk.remindme.view;
+package com.in.nyk.remindme.ui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

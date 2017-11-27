@@ -1,4 +1,4 @@
-package com.in.nyk.remindme.view.AnimatedTransitionView;
+package com.in.nyk.remindme.ui.view.AnimatedTransitionView;
 
 /**
  * Created by nikhilkanse on 22/11/17.

@@ -1,4 +1,4 @@
-package com.in.nyk.remindme.activity;
+package com.in.nyk.remindme.ui.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;

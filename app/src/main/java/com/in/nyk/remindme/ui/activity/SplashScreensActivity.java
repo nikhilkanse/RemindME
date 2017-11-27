@@ -1,4 +1,4 @@
-package com.in.nyk.remindme.activity;
+package com.in.nyk.remindme.ui.activity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.in.nyk.remindme.R;
-import com.in.nyk.remindme.view.AnimatedTransitionView.KenBurnsView;
+import com.in.nyk.remindme.ui.view.AnimatedTransitionView.KenBurnsView;
 
 /**
  * Created by nikhilkanse on 22/11/17.

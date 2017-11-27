@@ -33,7 +33,7 @@
     <!-- android:layout_marginTop="?android:attr/actionBarSize"-->
     <fragment
         android:id="@+id/navigationDrawerFragment"
-        android:name="com.in.nyk.remindme.fragment.NavigationMenuFragment"
+        android:name="com.in.nyk.remindme.ui.fragment.NavigationMenuFragment"
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start" />

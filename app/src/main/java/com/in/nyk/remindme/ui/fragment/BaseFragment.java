@@ -1,4 +1,4 @@
-package com.in.nyk.remindme.fragment;
+package com.in.nyk.remindme.ui.fragment;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
@@ -18,7 +18,7 @@ import android.widget.ViewFlipper;
 
 import com.google.android.gms.common.api.ApiException;
 import com.in.nyk.remindme.R;
-import com.in.nyk.remindme.activity.BaseActivity;
+import com.in.nyk.remindme.ui.activity.BaseActivity;
 import com.in.nyk.remindme.core.RemindMEApplication;
 import com.in.nyk.remindme.util.ErrorHandler;
 import com.in.nyk.remindme.util.FontManager;
